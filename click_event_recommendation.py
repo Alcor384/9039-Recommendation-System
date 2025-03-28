@@ -47,7 +47,7 @@ def optimize_weights():
 
         similarity_matrix = cosine_similarity(recipe_features)
 
-        clicked_recipe = "R012"
+        clicked_recipe = "R010"
         recommended_recipes = get_recommendations(clicked_recipe, df, similarity_matrix)
         ndcg = compute_ndcg(recommended_recipes.index, [1, 0, 0, 0, 0])
 
@@ -89,7 +89,7 @@ recipe_features = np.hstack((
 
 similarity_matrix = cosine_similarity(recipe_features)
 
-clicked_recipe = "R012"
+clicked_recipe = "R010"
 recommended_recipes = get_recommendations(clicked_recipe, df, similarity_matrix)
 avg_similarity, similarities = compute_avg_similarity(clicked_recipe, similarity_matrix, df)
 
