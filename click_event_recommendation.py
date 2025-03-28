@@ -7,7 +7,7 @@ from sklearn.preprocessing import OneHotEncoder, MinMaxScaler
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics import ndcg_score
 
-df = pd.read_csv("recipe_data.csv")
+df = pd.read_csv("recipe_processed.csv")
 df.drop(columns=['Recipe_Name'], inplace=True)
 
 cuisine_encoder = OneHotEncoder(sparse=False)
